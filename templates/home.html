@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome page</title>
+</head>
+<style>
+    .buttons {
+        top: 50%;
+        left: 50%;
+    }
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #000000;
+    }
+</style>
+<body>
+    <div class = "buttons">
+
+        <a href="{% url 'sqlapp:disease_type' %}">
+        <button class="button">
+            Disease type
+        </button>
+        </a>
+        <a href="{% url 'sqlapp:country' %}">
+        <button class="button">
+            Country
+        </button></a>
+        <a href="{% url 'sqlapp:disease' %}">
+        <button class="button">
+            Disease
+        </button></a>
+        <a href="{% url 'sqlapp:discover' %}">
+        <button class="button">
+            Discover
+        </button></a>
+        <a href="{% url 'sqlapp:users' %}">
+        <button class="button">
+            Users
+        </button></a>
+        <a href="{% url 'sqlapp:public_servant' %}">
+        <button class="button">
+            Public Servant
+        </button></a>
+        <a href="{% url 'sqlapp:doctor' %}">
+        <button class="button">
+            Doctor
+        </button></a>
+        <a href="{% url 'sqlapp:specialize' %}">
+        <button class="button">
+            Specialize
+        </button></a>
+        <a href="{% url 'sqlapp:record' %}">
+        <button class="button">
+            Record
+        </button></a>
+    </div>
+</body>
+</html>

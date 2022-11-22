@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Users</title>
+</head>
+<body>
+<h2>Users</h2>
+    <form method="POST" action="/sqlapp/create_disease_type/">
+        {% csrf_token %}
+        <p>
+            <label>Email</label><br>
+            <input type="text" name="disease_code" />
+        </p>
+        <p>
+            <label>Name</label><br>
+            <input type="text" name="population" />
+
+        </p>
+        <p>
+            <label>Surname</label><br>
+            <input type="text" name="population" />
+
+        </p>
+        <p>
+            <label>Salary</label><br>
+            <input type="number" name="population" />
+
+        </p>
+        <p>
+            <label>Phone</label><br>
+            <input type="number" name="population" />
+
+        </p>
+        <p>
+            <label>Country Name</label><br>
+            <input type="number" name="population" />
+
+        </p>
+        <input type="submit" value="Save" >
+    </form>
+    {% if users.count > 0 %}
+    <h2>User List</h2>
+    <table>
+        <thead><th>Email</th><th>Name</th><th>Surname</th><th>Salary</th><th>Phone</th><th>Country Name</th><th></th></thead>
+        {% for i in users %}
+        <tr>
+            <td>{{ i.email }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.surname }}</td>
+            <td>{{ i.salary }}</td>
+            <td>{{ i.phone }}</td>
+            <td>{{ i.cname }}</td>
+            <td><a href="/sqlapp/edit_disease_type/{{i.id}}">Edit</a> | <a href="/sqlapp/delete_disease_type/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>

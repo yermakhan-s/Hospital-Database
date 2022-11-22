@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Record</title>
+</head>
+<body>
+<h2>Record</h2>
+    <form method="POST" action="/sqlapp/create_disease_type/">
+        {% csrf_token %}
+        <p>
+            <label>Total Death</label><br>
+            <input type="number" name="disease_code" />
+        </p>
+        <p>
+            <label>Patients</label><br>
+            <input type="number" name="population" />
+
+        </p>
+        <p>
+            <label>Disease Code</label><br>
+            <input type="text" name="population" />
+
+        </p>
+        <p>
+            <label>Country name</label><br>
+            <input type="text" name="population" />
+
+        </p>
+
+        <p>
+            <label>Email</label><br>
+            <input type="text" name="population" />
+
+        </p>
+        <input type="submit" value="Save" >
+    </form>
+    {% if rec.count > 0 %}
+    <h2>Record List</h2>
+    <table>
+        <thead><th>Total Death</th><th>Patients</th><th>Disease Code</th><th>Country Name</th><th>Email</th><th></th></thead>
+        {% for i in rec %}
+        <tr>
+            <td>{{ i.total_death }}</td>
+            <td>{{ i.total_patients }}</td>
+            <td>{{ i.disease_code }}</td>
+            <td>{{ i.cname }}</td>
+            <td>{{ i.email }}</td>
+            <td><a href="/sqlapp/edit_disease_type/{{i.id}}">Edit</a> | <a href="/sqlapp/delete_disease_type/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Country</title>
+</head>
+<body>
+<h2>Country</h2>
+    <form method="POST" action="/sqlapp/create_disease_type/">
+        {% csrf_token %}
+        <p>
+            <label>Country name</label><br>
+            <input type="text" name="country_name" />
+        </p>
+        <p>
+            <label>Population</label><br>
+            <input type="number" name="population" />
+        </p>
+        <input type="submit" value="Save" >
+    </form>
+    {% if country.count > 0 %}
+    <h2>Country List</h2>
+    <table>
+        <thead><th>Name</th><th>Population</th><th></th></thead>
+        {% for i in country %}
+        <tr>
+            <td>{{ i.cname }}</td>
+            <td>{{ i.population }}</td>
+            <td><a href="/sqlapp/edit_disease_type/{{i.id}}">Edit</a> | <a href="/sqlapp/delete_disease_type/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>

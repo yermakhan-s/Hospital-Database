@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Disease Type</title>
+</head>
+<body>
+    <h2>Disease Type</h2>
+    <form method="POST" action="/sqlapp/create_disease_type/">
+        {% csrf_token %}
+        <p>
+            <label>ID</label><br>
+            <input type="number" name="ID" />
+        </p>
+        <p>
+            <label>Description</label><br>
+            <input type="text" name="description" />
+        </p>
+        <input type="submit" value="Save" >
+    </form>
+    {% if diseasetype.count > 0 %}
+    <h2>Disease-type List</h2>
+    <table>
+        <thead><th>Id</th><th>Description</th><th></th></thead>
+        {% for i in diseasetype %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.description }}</td>
+            <td><a href="/sqlapp/edit_disease_type/{{i.id}}">Edit</a> | <a href="/sqlapp/delete_disease_type/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
