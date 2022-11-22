@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'assignment2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd8fj7fje7koc13',
-        'USER': 'mtcebfhwjoqefw',
-        'PASSWORD': 'c51d27a8fcf93eba0db7dff72a7ded2b1cb7e478aa0c53754866a6d75428474c',
-        'HOST': 'ec2-52-21-207-163.compute-1.amazonaws.com',
+        'NAME': 'd20vg3g76i6sq5',
+        'USER': 'lbibotqatwtitn',
+        'PASSWORD': 'd4c3b96c64031c939a935e3cb78948e7f72c7f66fd32112b437cf1e9844ab493',
+        'HOST': 'ec2-35-173-91-114.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -134,7 +134,7 @@ USE_TZ = True
 
 # STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'templates')
-STATIC_URL = '/templates/'
+STATIC_URL = '/static/'
 django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

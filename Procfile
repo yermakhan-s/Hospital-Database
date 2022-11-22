@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn sqlapp.wsgi --log-file=-
+web: gunicorn assignment2.wsgi --log-file=-
