@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'assignment2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd20vg3g76i6sq5',
-        'USER': 'lbibotqatwtitn',
-        'PASSWORD': 'd4c3b96c64031c939a935e3cb78948e7f72c7f66fd32112b437cf1e9844ab493',
-        'HOST': 'ec2-35-173-91-114.compute-1.amazonaws.com',
+        'NAME': 'd1a9gs373bve0s',
+        'USER': 'ibhjbrcmnlmkcj',
+        'PASSWORD': 'b6d9ff1d00ead976c37bd585ed4a2c920e9785fb941bf0614c212cbfdb10f368',
+        'HOST': 'ec2-44-206-197-71.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
